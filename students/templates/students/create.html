@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if not created %}
+        <div style='margin-top: 30px;'>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                &ensp;&ensp;<button style='margin-top: 30px;' type='submit'>Create</button>
+            </form>
+        </div>
+    {% else %}
+        <a href="/info_view/">Student List</a>
+     {% endif %}   
+
+{% endblock content %}

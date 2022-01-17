@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <hr>
+    <h3 align="center">Student List</h3>
+    <hr>
+    <ol>
+        {% for x in object_list %}
+            {% if x.roll_no %}
+                <li>{{ x.name }} - <a href="/info_view/detail_info_view/{{ x.roll_no }}/">{{ x.roll_no }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <br>
+    <br>
+    <a href="/create/"><h5 align="center">Click here to create new student record</h5></a>
+{% endblock content %}

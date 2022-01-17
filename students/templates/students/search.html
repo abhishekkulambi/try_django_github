@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h5>&ensp;&ensp;Search Results</h5>
+    {% for object in object_list %}
+        {% if object.name %}
+            <ul>
+                <li><a href="/info_view/detail_info_view/{{ object.roll_no }}/">{{ object.name }}</a></li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
